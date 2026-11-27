@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <!-- Viewport: hace que la página use el ancho real del celular -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Restaurante Sabor Casero: comida tradicional mexicana con el sabor de casa en Cadereyta Jiménez, N.L.">
+  <title>Servicios | Restaurante Sabor Casero</title>
+  <!-- Letras de Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Hoja de estilos externa -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <div class="barra">
+      <a href="index.html"><img id="logo" src="images/logo.jpeg" alt="Logo de Restaurante Sabor Casero"></a>
+      <!-- Botón hamburguesa: en el celular abre y cierra el menú -->
+      <button class="hamburguesa" id="boton-menu" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="menu-principal">&#9776;</button>
+      <nav id="menu-principal" aria-label="Menú principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="menu.html">Menú</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="servicios.html" class="activo" aria-current="page">Servicios</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+    <h1>Servicios</h1>
+  </header>
+
+  <main>
+    <p>
+      En Sabor Casero queremos que disfrutes la comida como más te convenga:
+      en nuestro local, en tu casa o en tu próximo evento.
+    </p>
+
+    <article class="servicio">
+      <div>
+        <h2>Comida en el local</h2>
+
+        <p>Disfruta tus platillos recién hechos en un ambiente familiar, con mesas cómodas para grupos grandes y pequeños.</p>
+      </div>
+    </article>
+
+    <article class="servicio ">
+      <div>
+        <h2>Para llevar</h2>
+        <p>Pide tu comida por teléfono y pasa por ella lista y bien empacada, sin tiempos de espera.</p>
+      </div>
+    </article>
+
+    <article class="servicio">
+      <div>
+        <h2>Eventos y pedidos grandes</h2>
+        <p>Preparamos comida para cumpleaños, reuniones de trabajo y fiestas familiares. Cotiza con anticipación.</p>
+      </div>
+    </article>
+
+    <article class="servicio ">
+      <div>
+        <h2>Menú del día</h2>
+        <p>Cada día un guisado distinto con sopa, arroz, frijoles, tortillas y agua fresca a precio especial.</p>
+      </div>
+    </article>
+
+    <p class="centrado"><a href="contacto.html" class="boton-primario">Haz tu pedido o reservación</a></p>
+  </main>
+
+  <footer>
+    <div class="redes">
+      <a href="https://www.facebook.com/yamilethhhbelmares" target="_blank" rel="noopener"><img src="images/face.jpg" alt="Facebook de Sabor Casero"></a>
+      <a href="https://www.instagram.com/_yamilethhbm?xtok=YmN6cjA3MnYwYmh5&utm_-source=qr" target="_blank" rel="noopener"><img src="images/insta.jpg" alt="Instagram de Sabor Casero"></a>
+    </div>
+    <p class="derechos">&copy; 2026 Restaurante Sabor Casero &middot; Ejido Tepehuaje, Cadereyta Jiménez, N.L.</p>
+    <a href="contacto.html"><img src="images/comentario.jpg" alt="Escríbenos un mensaje"></a>
+  </footer>
+
+  <script>
+    // Abre y cierra el menú hamburguesa en el celular
+    var boton = document.getElementById("boton-menu");
+    var menu = document.getElementById("menu-principal");
+    boton.addEventListener("click", function () {
+      var abierto = menu.classList.toggle("abierto");
+      boton.setAttribute("aria-expanded", abierto);
+    });
+  </script>
+</body>
+</html>

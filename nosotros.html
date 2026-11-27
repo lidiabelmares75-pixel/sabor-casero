@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <!-- Viewport: hace que la página use el ancho real del celular -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Restaurante Sabor Casero: comida tradicional mexicana con el sabor de casa en Cadereyta Jiménez, N.L.">
+  <title>Nosotros | Restaurante Sabor Casero</title>
+  <!-- Letras de Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Hoja de estilos externa -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <div class="barra">
+      <a href="index.html"><img id="logo" src="images/logo.jpeg" alt="Logo de Restaurante Sabor Casero"></a>
+      <!-- Botón hamburguesa: en el celular abre y cierra el menú -->
+      <button class="hamburguesa" id="boton-menu" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="menu-principal">&#9776;</button>
+      <nav id="menu-principal" aria-label="Menú principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="menu.html">Menú</a></li>
+          <li><a href="nosotros.html" class="activo" aria-current="page">Nosotros</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+    <h1>Nosotros</h1>
+  </header>
+
+  <main>
+    <section class="sobre-mi">
+      <img src="images/logo.jpeg" alt="Logo de Restaurante Sabor Casero con una olla de barro y un gorro de chef">
+      <div>
+        <h2>Nuestra historia</h2>
+        <p>
+          Restaurante Sabor Casero nació con una idea sencilla: servir la comida que se prepara en casa,
+          con recetas tradicionales mexicanas que pasan de generación en generación.
+          Estamos en Ejido Tepehuaje "Pueblo Nuevo",
+           Cadereyta Jimenez, Nuevo León, y recibimos a cada cliente como parte de la familia.
+        </p>
+        <p>
+          Cocinamos con ingredientes frescos, porciones generosas y precios accesibles.
+          Conoce nuestro <a href="menu.html">menú</a>, revisa nuestros
+          <a href="servicios.html">servicios</a> o <a href="contacto.html">visítanos</a>.
+        </p>
+      </div>
+    </section>
+
+    <section class="mision-vision">
+      <article class="bloque">
+        <h2>Misión</h2>
+        <p>Ofrecer comida tradicional mexicana preparada con ingredientes frescos y recetas de casa, a precios accesibles y en un ambiente familiar, para que cada cliente se sienta como en casa.</p>
+      </article>
+      <article class="bloque">
+        <h2>Visión</h2>
+        <p>Ser el restaurante de comida casera preferido en Cadereyta Jiménez y la región, reconocido por su sabor, su calidez en el servicio y su compromiso con las tradiciones culinarias de México.</p>
+      </article>
+    </section>
+
+    <section class="valores">
+      <h2>Nuestros valores</h2>
+      <div class="rejilla">
+        <article class="platillo">
+           <img src="images/CALIDAD.png" alt="CALIDAD">
+          <h3>Calidad</h3>
+          <p>Seleccionamos verduras, carnes y especias frescas para que todo tenga el mejor sabor.</p>
+        </article>
+        <article class="platillo">
+           <img src="images/familiar.png" alt="calidez">
+          <h3>Calidez familiar</h3>
+          <p>Tratamos a cada cliente como parte de nuestra familia.</p>
+        </article>
+        <article class="platillo">
+           <img src="images/honestidad.png" alt="honeztidad">
+          <h3>Honestidad</h3>
+          <p>Precios claros y porciones justas, sin sorpresas.</p>
+        </article>
+        <article class="platillo">
+           <img src="images/comida.png" alt="mx">
+          <h3>Tradición</h3>
+          <p>Respetamos y conservamos las recetas mexicanas de siempre.</p>
+        </article>
+        <article class="platillo">
+           <img src="images/higiene.png" alt="Higiene">
+          <h3>Higiene</h3>
+          <p>Cocina y mesas limpias para cuidar tu salud.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="redes">
+      <a href="https://www.facebook.com/yamilethhhbelmares" target="_blank" rel="noopener"><img src="images/face.jpg" alt="Facebook de Sabor Casero"></a>
+      <a href="https://www.instagram.com/_yamilethhbm?xtok=YmN6cjA3MnYwYmh5&utm_-source=qr" target="_blank" rel="noopener"><img src="images/insta.jpg" alt="Instagram de Sabor Casero"></a>
+    </div>
+    <p class="derechos">&copy; 2026 Restaurante Sabor Casero &middot; Ejido Tepehauje, Cadereyta Jiménez, N.L.</p>
+    <a href="contacto.html"><img src="images/comentario.jpg" alt="Escríbenos un mensaje"></a>
+  </footer>
+
+  <script>
+    // Abre y cierra el menú hamburguesa en el celular
+    var boton = document.getElementById("boton-menu");
+    var menu = document.getElementById("menu-principal");
+    boton.addEventListener("click", function () {
+      var abierto = menu.classList.toggle("abierto");
+      boton.setAttribute("aria-expanded", abierto);
+    });
+  </script>
+</body>
+</html>

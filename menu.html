@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <!-- Viewport: hace que la página use el ancho real del celular -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Restaurante Sabor Casero: comida tradicional mexicana con el sabor de casa en Cadereyta Jiménez, N.L.">
+  <title>Menú | Restaurante Sabor Casero</title>
+  <!-- Letras de Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Hoja de estilos externa -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <div class="barra">
+      <a href="index.html"><img id="logo" src="images/logo.jpeg" alt="Logo de Restaurante Sabor Casero"></a>
+      <!-- Botón hamburguesa: en el celular abre y cierra el menú -->
+      <button class="hamburguesa" id="boton-menu" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="menu-principal">&#9776;</button>
+      <nav id="menu-principal" aria-label="Menú principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="menu.html" class="activo" aria-current="page">Menú</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+    <h1>Nuestro menú</h1>
+  </header>
+
+  <main>
+    <p class="intro-menu">
+      Todo lo preparamos al momento con ingredientes frescos y recetas de casa.
+      Elige tu categoría favorita:
+    </p>
+    <ul class="indice-menu">
+      
+      <li><a href="#desayunos">Desayunos</a></li>
+      <li><a href="#fuertes">Platillos fuertes</a></li>
+      <li><a href="#bebidas">Bebidas</a></li>
+      <li><a href="#postres">Postres</a></li>
+    </ul>
+
+    <section class="categoria" id="desayunos">
+      <h2>Desayunos</h2>
+      <div class="rejilla">
+        <article class="platillo">
+          
+          <img src="images/huevos.jpg" alt="huevos al gusto"> <h3>Huevos al gusto</h3>
+          <p>Con jamón, chorizo o a la mexicana. Incluye frijoles y café.</p>
+          <p class="precio">$65</p>
+        </article>
+        <article class="platillo">
+<img src="images/machacado con huevo.jpeg" alt="machacado con huevo">                    <h3>Machacado con huevo</h3>
+          <p>Carne seca guisada con huevo y tortillas de harina.</p>
+          <p class="precio">$95</p>
+        </article>
+        <article class="platillo">
+<img src="images/chilaquiles rv.jpeg"  alt="chilaquiles"> <h3>Chilaquiles</h3>
+          <p>Verdes o rojos, con pollo deshebrado, crema y queso.</p>
+          <p class="precio">$135</p>
+        </article>
+        <article class="platillo">
+          <img src="images/gorditas.jpg" alt="gorditas">
+          <h3>Gorditas de guisado</h3>
+          <p>Chicharrón, papa con chorizo o deshebrada. Orden de 3.</p>
+          <p class="precio">$75</p>
+        </article>
+      </div>
+      <p class="pista">Desliza para ver más &rarr;</p>
+    </section>
+
+    <section class="categoria" id="fuertes">
+      <h2>Platillos fuertes</h2>
+      <div class="rejilla">
+        <article class="platillo">
+<img src="images/asado de puerco.jpg" alt="asado de puerco">      <h3>Asado de puerco</h3>
+          <p>Cerdo en salsa de chile colorado, con arroz y frijoles.</p>
+          <p class="precio">$110</p>
+        </article>
+        <article class="platillo">
+         <img src="images/caldo de res.png" alt="caldo de res">
+          <h3>Caldo de res</h3>
+          <p>Con verduras, arroz y tortillas hechas a mano.</p>
+          <p class="precio">$105</p>
+        </article>
+        <article class="platillo">
+         <img src="images/pollo en mole.jpg" alt="pollo en mole">
+          <h3>Pollo en mole</h3>
+          <p>Pierna y muslo bañados en mole poblano con arroz.</p>
+          <p class="precio">$115</p>
+        </article>
+        <article class="platillo">
+          <img src="images/enchiladas rojas.jpg" alt="enchiladas rojas">
+          <h3>Enchiladas rojas</h3>
+          <p>Tres enchiladas con pollo, lechuga, queso y crema.</p>
+          <p class="precio">$90</p>
+        </article>
+
+        <article class="platillo">
+         <img src="images/pozole verde.jpg" alt="pozole verde">
+          <h3>Pozole verde de pollo </h3>
+          <p>Pozole verde con pollo, maíz y salsa de chile verde.</p>
+          <p class="precio">$150</p>
+        </article>
+
+        <article class="platillo">
+         <img src="images/tacos al pastor.jpg" alt="tacos al pastor">
+          <h3>Tacos al pastor</h3>
+          <p>tortillas de maíz con carne de cerdo al pastor, piña, cebolla y cilantro. Orden de 5</p>
+          <p class="precio">$80</p>
+        </article>
+
+        <article class="platillo">
+         <img src="images/tamales.jpg" alt="tamales">
+          <h3>Tamales</h3>
+          <p>Tamales tradicionales de masa de maíz, rellenos de deliciosos guisos y preparados al vapor.</p>
+          <p class="precio">$12 cada uno.</p>
+        </article>
+
+        <article class="platillo">
+         <img src="images/flautas.jpg" alt="flautas">
+          <h3>Flautas de pollo</h3>
+          <p>Crujientes flautas rellenas de pollo, acompañadas de deliciosos ingredientes y mucho sabor.</p>
+          <p class="precio">$115</p>
+        </article>
+
+        
+      </div>
+      <p class="pista">Desliza para ver más &rarr;</p>
+    </section>
+
+    <section class="categoria" id="bebidas">
+      <h2>Bebidas</h2>
+      <div class="rejilla">
+        <article class="platillo">
+          <img src="images/aguas.jpg" alt="aguas">
+          <h3>Agua fresca</h3>
+          <p>Jamaica, horchata o limón. Vaso grande.</p>
+          <p class="precio">$30</p>
+        </article>
+        <article class="platillo">
+          <img src="images/cafe de olla.png" alt="cafe d olla">
+          <h3>Café de olla</h3>
+          <p>Con piloncillo y canela, servido caliente.</p>
+          <p class="precio">$35</p>
+        </article>
+        <article class="platillo">
+        <img src="images/chocolate.jpg" alt="chocolate">
+          <h3>Chocolate caliente</h3>
+          <p>Preparado con leche y chocolate de metate.</p>
+          <p class="precio">$40</p>
+        </article>
+        <article class="platillo">
+         <img src="images/REFRESCO.png" alt="refresco">
+          <h3>Refresco</h3>
+          <p>Refresco individual de 355 ml.</p>
+          <p class="precio">$28</p>
+        </article>
+      </div>
+      <p class="pista">Desliza para ver más &rarr;</p>
+    </section>
+
+    <section class="categoria" id="postres">
+      <h2>Postres</h2>
+      <div class="rejilla">
+        <article class="platillo">
+           <img src="images/flan.jpg" alt="flan">
+          <h3>Flan casero</h3>
+          <p>Con caramelo y un toque de vainilla.</p>
+          <p class="precio">$45</p>
+        </article>
+        <article class="platillo">
+           <img src="images/arroz con leche.jpg" alt="arroz con leche">
+          <h3>Arroz con leche</h3>
+          <p>Con canela y pasitas, servido frío.</p>
+          <p class="precio">$40</p>
+        </article>
+        <article class="platillo">
+           <img src="images/pastel de tres .png" alt="pastel de tres leches">
+
+          <h3>Pastel de tres leches</h3>
+          <p>Rebanada con crema batida.</p>
+          <p class="precio">$55</p>
+        </article>
+        <article class="platillo">
+           <img src="images/pan_de_elote.jpg" alt="pan de elote">
+          <h3>Pan de elote</h3>
+          <p>Rebanada de elote suave y esponjoso, elaborado con maíz dulce.</p>
+          <p class="precio">$45</p>
+        </article>
+      </div>
+      <p class="pista">Desliza para ver más &rarr;</p>
+    </section>
+
+
+    
+
+
+    <p class="nota-precios">*Los precios están en pesos mexicanos y pueden cambiar sin previo aviso.</p>
+  </main>
+
+  <footer>
+    <div class="redes">
+      <a href="https://www.facebook.com/yamilethhhbelmares" target="_blank" rel="noopener"><img src="images/face.jpg" alt="Facebook de Sabor Casero"></a>
+      <a href="https://www.instagram.com/_yamilethhbm?xtok=YmN6cjA3MnYwYmh5&utm_-source=qr" target="_blank" rel="noopener"><img src="images/insta.jpg" alt="Instagram de Sabor Casero"></a>
+    </div>
+    <p class="derechos">&copy; 2026 Restaurante Sabor Casero &middot; Ejido Tepehuaje, Cadereyta Jiménez, N.L.</p>
+    <a href="contacto.html"><img src="images/comentario.jpg" alt="Escríbenos un mensaje"></a>
+  </footer>
+
+  <script>
+    // Abre y cierra el menú hamburguesa en el celular
+    var boton = document.getElementById("boton-menu");
+    var menu = document.getElementById("menu-principal");
+    boton.addEventListener("click", function () {
+      var abierto = menu.classList.toggle("abierto");
+      boton.setAttribute("aria-expanded", abierto);
+    });
+  </script>
+</body>
+</html>

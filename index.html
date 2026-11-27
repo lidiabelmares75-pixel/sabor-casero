@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <!-- Viewport: hace que la página use el ancho real del celular -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Restaurante Sabor Casero: comida tradicional mexicana con el sabor de casa en Cadereyta Jiménez, N.L.">
+  <title>Inicio | Restaurante Sabor Casero</title>
+  <!-- Letras de Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Hoja de estilos externa -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <div class="barra">
+      <a href="index.html"><img id="logo" src="images/logo.jpeg" alt="Logo de Restaurante Sabor Casero"></a>
+      <!-- Botón hamburguesa: en el celular abre y cierra el menú -->
+      <button class="hamburguesa" id="boton-menu" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="menu-principal">&#9776;</button>
+      <nav id="menu-principal" aria-label="Menú principal">
+        <ul>
+          <li><a href="index.html" class="activo" aria-current="page">Inicio</a></li>
+          <li><a href="menu.html">Menú</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+    <h1>Restaurante Sabor Casero</h1>
+  </header>
+
+  <main>
+    <section class="inicio">
+      <h2>Bienvenido a tu segunda casa</h2>
+      <p>
+        Restaurante Sabor Casero ofrece comida tradicional mexicana con buen sabor, precios accesibles y un
+        ambiente familiar, buscando que nuestros clientes se sientan como en casa.
+      </p>
+      <a href="menu.html" class="boton-primario">Conoce nuestro menú</a>
+    </section>
+
+    <!-- Carrusel de platillos: en el celular se desliza con el dedo -->
+    <section class="proyectos-home">
+      <h2>Especiales de la casa</h2>
+      <div class="carrusel" tabindex="0" aria-label="Carrusel de platillos destacados">
+        <article class="platillo proyecto">
+<img src="images/machacado con huevo.jpeg" alt="huevo con machacado">          <h3>Machacado con huevo</h3>
+          <p>Carne seca machacada guisada con huevo, frijoles y tortillas de harina.</p>
+          <p class="precio">$95</p>
+        </article>
+        <article class="platillo proyecto">
+<img src="images/pozole verde.jpg" alt="pozole verde">             <h3>Pozole verde de pollo</h3>
+          <p>Pozole verde con pollo, maíz y salsa de chile verde.</p>
+          <p class="precio">$150</p>
+        </article>
+        <article class="platillo proyecto">
+<img src="images/chilaquiles.jpg" alt="chilaquiles">            <h3>Chilaquiles verdes</h3>
+          <p>Totopos bañados en salsa verde, acompañados de queso, crema, pollo y cebolla.</p>
+          <p class="precio">$135</p>
+        </article>
+        <article class="platillo proyecto">
+<img src="images/tacos al pastor.jpg" alt="tacos al pastor">            <h3>Tacos al pastor</h3>
+          <p>Tortillas de maíz con carne de cerdo al pastor, piña, cebolla y cilantro. Orden de 5.</p>
+          <p class="precio">$80</p>
+        </article>
+      </div>
+      <p class="pista">Desliza para ver más platillos &rarr;</p>
+    </section>
+
+    <section class="horario">
+      <h2>Horario de atención</h2>
+      <ul>
+        <li><strong>Lunes a viernes:</strong> 8:00 a.m. a 8:00 p.m.</li>
+        <li><strong>Sábado y domingo:</strong> 7:00 a.m. a 7:00 p.m.</li>
+      </ul>
+      <a href="contacto.html" class="boton-primario">Cómo llegar</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="redes">
+      <a href="https://www.facebook.com/yamilethhhbelmares" target="_blank" rel="noopener"><img src="images/face.jpg" alt="Facebook de Sabor Casero"></a>
+      <a href="https://www.instagram.com/_yamilethhbm?xtok=YmN6cjA3MnYwYmh5&utm_-source=qr" target="_blank" rel="noopener"><img src="images/insta.jpg" alt="Instagram de Sabor Casero"></a>
+    </div>
+    <p class="derechos">&copy; 2026 Restaurante Sabor Casero &middot; Ejido Tepehuaje, Cadereyta Jiménez, N.L.</p>
+    <a href="contacto.html"><img src="images/comentario.jpg" alt="Escríbenos un mensaje"></a>
+  </footer>
+
+  <script>
+    // Abre y cierra el menú hamburguesa en el celular
+    var boton = document.getElementById("boton-menu");
+    var menu = document.getElementById("menu-principal");
+    boton.addEventListener("click", function () {
+      var abierto = menu.classList.toggle("abierto");
+      boton.setAttribute("aria-expanded", abierto);
+    });
+  </script>
+</body>
+</html>

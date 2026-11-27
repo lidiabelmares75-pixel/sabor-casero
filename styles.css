@@ -1,0 +1,313 @@
+/* 
+   RESTAURANTE SABOR CASERO - Hoja de estilos externa
+    */
+
+/*  Selectores de tipo (etiquetas)  */
+body {
+  margin: 0;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #3e1610;
+  background-color: #dbccb7;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+h1, h2, h3 { font-family: "Montserrat", Arial, sans-serif; color: #5a2a1c; }
+h1 { text-align: center; font-size: 34px; margin: 20px 0 0 0; }
+h2 { margin-top: 0; }
+a { color: #8a2f27; }
+img { max-width: 100%; }
+p { text-align: justify; hyphens: auto; }
+
+/*  Encabezado y navegación  */
+header { background-color: #af8a6e; padding: 0px 30px 10px 50px; }
+.barra { display: flex; justify-content: space-between; align-items: center; }
+#logo { width: 100px; height: 100px; border-radius: 50%; }
+nav ul { list-style: none; margin: 0; padding: 0; }
+nav li { display: inline; margin-left: 2px; }
+nav a {
+  text-decoration: none;
+  color: #2b120c;
+  font-weight: bold;
+  padding: 5px;
+  border-bottom: 3px solid transparent;
+}
+nav a:hover, nav a.activo { color: #ffffff; border-bottom-color: #7a2a14; }
+
+/*  Contenido principal (modelo de caja)  */
+main {
+  flex: 1;
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 1030px;
+  margin: 0 auto;
+  padding: 30px 40px;
+}
+
+/*  Botones  */
+.boton-primario {
+  display: inline-block;
+  background-color: #7a2a14;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 17px;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.boton-primario:hover, .boton-primario:focus {
+  background-color: #b5532a;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, .carrusel:focus-visible {
+  outline: 3px solid #e8a33a;
+  outline-offset: 2px;
+}
+
+/*  Inicio  */
+.inicio { text-align: center; margin-top: 0px; }
+.centrado { text-align: center; }
+
+/* Carrusel: las tarjetas van en fila y se deslizan de lado */
+.proyectos-home { text-align: center; margin-top: 40px; }
+.carrusel {
+  display: flex;
+  justify-content: center;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 10px;
+}
+.carrusel .platillo { flex: 0 0 205px; width: auto; margin: 10px 8px; scroll-snap-align: center; }
+.pista { display: none; text-align: center; font-size: 14px; }
+
+.horario {
+  background-color: #fbf3e4;
+  padding: 20px 25px;
+  margin-top: 40px;
+  border-radius: 10px;
+  text-align: center;
+}
+.horario ul { list-style: none; padding: 0; margin: 0 0 20px 0; }
+
+/* Tarjetas de platillos  */
+.rejilla { display: flex; flex-wrap: wrap; justify-content: center; }
+.platillo {
+  width: 210px;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: #fbf3e4;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 10px;
+  font-size: 15px;
+  box-shadow: 0 2px 6px rgba(62, 22, 16, 0.15);
+}
+.platillo h3 { margin: 8px 0; font-size: 18px; }
+.platillo p { text-align: center; margin: 6px 0; }
+.icono-platillo { display: block; font-size: 56px; line-height: 1.2; }
+.precio { font-weight: bold; font-size: 18px; color: #7a2a14; }
+
+/*  Menú  */
+.intro-menu { text-align: center; }
+.indice-menu { list-style: none; padding: 0; margin: 0 0 20px 0; text-align: center; }
+.indice-menu li { display: inline-block; margin: 5px; }
+.indice-menu a {
+  display: inline-block;
+  background-color: #af8a6e;
+  color: #2b120c;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 18px;
+  border-radius: 20px;
+}
+.indice-menu a:hover { background-color: #7a2a14; color: #ffffff; }
+.categoria { margin-top: 35px; scroll-margin-top: 10px; }
+.categoria h2 { border-bottom: 3px solid #af8a6e; padding-bottom: 5px; }
+.nota-precios { font-size: 14px; text-align: center; margin-top: 30px; }
+
+/*  Nosotros  */
+.sobre-mi { display: flex; align-items: center; }
+.sobre-mi img { width: 280px; height: 280px; object-fit: cover; border-radius: 50%; margin-right: 40px; flex-shrink: 0; }
+.valores { margin-top: 40px; text-align: center; }
+
+/*  Servicios  */
+.servicio {
+  display: flex;
+  align-items: center;
+  background-color: #fbf3e4;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+}
+.icono-servicio { font-size: 70px; margin: 0 30px; flex-shrink: 0; }
+.invertido { flex-direction: row-reverse; }
+
+/*  Contacto  */
+.contacto { display: flex; }
+.datos, form { flex: 1; margin: 10px 20px; }
+.datos ul { list-style: none; padding: 0; }
+.datos li img { width: 22px; vertical-align: middle; margin-right: 10px; }
+.datos iframe { width: 100%; height: 250px; border: 0; border-radius: 10px; }
+.como-llegar img { width: 22px; vertical-align: middle; margin-right: 8px; }
+form { background-color: #fbf3e4; padding: 20px; border-radius: 10px; }
+.campo { display: flex; align-items: flex-start; margin-bottom: 15px; }
+.campo img { width: 35px; margin: 5px 10px 0 0; }
+input, textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+  font-family: inherit;
+  border: 2px solid #b5532a;
+  border-radius: 6px;
+}
+
+/*  Pie de página  */
+footer {
+  background-color: #af8a6e;
+  padding: 15px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer img { width: 40px; margin-right: 10px; border-radius: 6px; }
+.derechos { font-size: 14px; margin: 0; text-align: center; color: #2b120c; }
+
+/* Botón hamburguesa: oculto en escritorio; solo aparece en celular */
+.hamburguesa { display: none; background: none; border: none; font-size: 34px; color: #2b120c; cursor: pointer; }
+
+
+/* 
+   CELULAR EN VERTICAL (portrait)
+    */
+@media (max-width: 600px) {
+  body { font-size: 16px; }
+
+  header { padding: 10px 20px 15px 20px; }
+  .barra { flex-wrap: wrap; }
+  #logo { width: 50px; height: 50px; }
+  h1 { font-size: 24px; }
+  .hamburguesa { display: block; }
+
+  /* Menú escondido; al tocar la hamburguesa se agrega la clase "abierto" */
+  nav { display: none; width: 100%; }
+  nav.abierto { display: block; }
+  nav li { display: block; margin: 0; }
+  nav a { display: block; padding: 12px 5px; }
+
+  main { padding: 20px; min-height: 0; }
+
+  /* Inicio */
+  .inicio { margin-top: 10px; }
+  .carrusel { justify-content: flex-start; }
+  .carrusel .platillo { flex: 0 0 75%; }
+  .pista { display: block; }
+
+  /* Menú */
+  .platillo { width: 100%; margin: 8px 0; }
+  .indice-menu a { padding: 8px 14px; }
+
+  /* Nosotros: logo arriba y texto abajo */
+  .sobre-mi { flex-direction: column; text-align: center; }
+  .sobre-mi img { width: 220px; height: 220px; margin: 0 0 20px 0; }
+
+  /* Misión y visión: una debajo de otra */
+  .mision-vision { flex-direction: column; }
+  .bloque { margin: 8px 0; }
+
+  /* Servicios: icono arriba y texto abajo (también los "invertidos") */
+  .servicio, .invertido { flex-direction: column; text-align: center; }
+  .icono-servicio { margin: 0 0 10px 0; }
+
+  /* Contacto: formulario arriba y mapa abajo */
+  .contacto { flex-direction: column-reverse; }
+  .datos, form { margin: 10px 0; }
+  .datos iframe { height: 220px; }
+
+  /* Pie de página en columna */
+  footer { padding: 12px 20px; flex-direction: column; gap: 8px; }
+}
+
+
+/* 
+   CELULAR EN HORIZONTAL (landscape)
+  */
+@media (orientation: landscape) and (max-height: 500px) {
+  body { font-size: 16px; }
+
+  header { padding: 8px 25px 10px 25px; }
+  #logo { width: 45px; height: 45px; }
+  h1 { font-size: 22px; margin-top: 5px; }
+  nav li { margin-left: 18px; }
+
+  main { padding: 15px 25px; min-height: 0; }
+
+  .inicio { margin-top: 10px; }
+  .carrusel .platillo { flex: 0 0 200px; }
+  .platillo { width: 180px; }
+  .icono-platillo { font-size: 40px; }
+  .sobre-mi img { width: 160px; height: 160px; margin-right: 25px; }
+  .servicio { padding: 10px; margin-bottom: 15px; }
+  .icono-servicio { font-size: 48px; margin: 0 15px; }
+  .datos iframe { height: 170px; }
+
+  footer { padding: 8px 25px; }
+  footer img { width: 30px; }
+}
+
+/* Misión y visión */
+.mision-vision { display: flex; margin-top: 40px; }
+.bloque {
+  flex: 1;
+  background-color: #fbf3e4;
+  padding: 20px 25px;
+  margin: 10px;
+  border-radius: 10px;
+  border-top: 5px solid #7a2a14;
+}
+.bloque h2 { text-align: center; }
+
+
+/*  Fotos de los platillos*/
+.platillo img {
+  display: block;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;      /* recorta la foto sin deformarla */
+  border-radius: 8px;
+  margin: 0 auto 8px auto;
+}
+
+/*  Carrusel del menú (solo celular) */
+@media (max-width: 600px) {
+  .categoria .rejilla {
+    flex-wrap: nowrap;                /* tarjetas en una sola fila */
+    justify-content: flex-start;
+    overflow-x: auto;                 /* se desliza de lado */
+    scroll-snap-type: x mandatory;    /* se detiene en cada tarjeta */
+    padding-bottom: 10px;
+  }
+  .categoria .platillo {
+    flex: 0 0 75%;
+    width: auto;
+    margin: 8px 6px;
+    scroll-snap-align: center;
+  }
+}
+
+/* Carrusel del menú en celular horizontal */
+@media (orientation: landscape) and (max-height: 500px) {
+  .categoria .rejilla {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 10px;
+  }
+  .categoria .platillo { flex: 0 0 200px; width: auto; scroll-snap-align: center; }
+  .platillo img { height: 100px; }
+  .pista { display: block; }
+}

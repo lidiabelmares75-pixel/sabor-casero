@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <!-- Viewport: hace que la página use el ancho real del celular -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Restaurante Sabor Casero: comida tradicional mexicana con el sabor de casa en Cadereyta Jiménez, N.L.">
+  <title>Contacto | Restaurante Sabor Casero</title>
+  <!-- Letras de Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Hoja de estilos externa -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <div class="barra">
+      <a href="index.html"><img id="logo" src="images/logo.jpeg" alt="Logo de Restaurante Sabor Casero"></a>
+      <!-- Botón hamburguesa: en el celular abre y cierra el menú -->
+      <button class="hamburguesa" id="boton-menu" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="menu-principal">&#9776;</button>
+      <nav id="menu-principal" aria-label="Menú principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="menu.html">Menú</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="contacto.html" class="activo" aria-current="page">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+    <h1>Contacto</h1>
+  </header>
+
+  <main>
+    <section class="contacto">
+      <div class="datos">
+        <h2>Mapa de ubicación</h2>
+        <iframe src="https://www.google.com/maps?q=Pueblo+Nuevo,+67490+N.L.&amp;output=embed" title="Mapa de ubicación de Restaurante Sabor Casero" loading="lazy"></iframe>
+        <p class="como-llegar">
+          <img src="images/ubi.jpg" alt="Icono de ubicación">
+          <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Pueblo+Nuevo,+67490+N.L." target="_blank" rel="noopener">Cómo llegar</a>
+        </p>
+        <ul>
+          <li><img src="images/ubi.jpg" alt="Dirección"> Ejido Tepehuaje "Pueblo Nuevo", Cadereyta Jiménez, N.L.</li>
+          <li><img src="images/correo.jpg" alt="Correo"> lidiabelmares75@gmail.com</li>
+          <li><img src="images/telefono.jpg" alt="Teléfono"> 828 173 99 55</li>
+        </ul>
+      </div>
+
+      <form id="form-contacto" action="#" method="post">
+        <h2>Reservaciones y pedidos</h2>
+        <div class="campo">
+          <img src="images/nombre.jpg" alt="Nombre">
+          <input type="text" name="nombre" placeholder="Tu nombre" aria-label="Tu nombre" required>
+        </div>
+        <div class="campo">
+          <img src="images/correo.jpg" alt="Correo electrónico">
+          <input type="email" name="correo" placeholder="Tu correo" aria-label="Tu correo" required>
+        </div>
+        <div class="campo">
+          <img src="images/telefono.jpeg" alt="Teléfono">
+          <input type="tel" name="telefono" placeholder="Tu teléfono" aria-label="Tu teléfono">
+        </div>
+        <div class="campo">
+          <img src="images/comentario.jpg" alt="Comentarios">
+          <textarea name="comentarios" placeholder="Fecha, número de personas o tu pedido" aria-label="Comentarios" rows="5"></textarea>
+        </div>
+        <button type="submit" class="boton-primario" id="btn-enviar">Enviar</button>
+        <p id="mensaje-form" role="status" style="margin-top:12px;font-weight:600;"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="redes">
+      <a href="https://www.facebook.com/yamilethhhbelmares" target="_blank" rel="noopener"><img src="images/face.jpg" alt="Facebook de Sabor Casero"></a>
+      <a href="https://www.instagram.com/_yamilethhbm?xtok=YmN6cjA3MnYwYmh5&utm_-source=qr" target="_blank" rel="noopener"><img src="images/insta.jpg" alt="Instagram de Sabor Casero"></a>
+    </div>
+    <p class="derechos">&copy; 2026 Restaurante Sabor Casero &middot; Ejido Tepehuaje, Cadereyta Jiménez, N.L.</p>
+    <a href="contacto.html"><img src="images/comentario.jpg" alt="Escríbenos un mensaje"></a>
+  </footer>
+
+  <script>
+    // Abre y cierra el menú hamburguesa en el celular
+    var boton = document.getElementById("boton-menu");
+    var menu = document.getElementById("menu-principal");
+    boton.addEventListener("click", function () {
+      var abierto = menu.classList.toggle("abierto");
+      boton.setAttribute("aria-expanded", abierto);
+    });
+  </script>
+
+  <script>
+    // ===== CONEXIÓN A LA BASE DE DATOS (Supabase) =====
+    // Pega aquí tus datos de Supabase (Project Settings > API)
+    var SUPABASE_URL = "https://zureslvtzptwssbhelyr.supabase.co/rest/v1/"
+";
+    var SUPABASE_KEY = "sb_publishable_umN_Lbtp0WWRJea-LOfCzA_JNFv8u_L";
+
+    var form = document.getElementById("form-contacto");
+    var mensaje = document.getElementById("mensaje-form");
+    var btn = document.getElementById("btn-enviar");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      btn.disabled = true;
+      mensaje.style.color = "inherit";
+      mensaje.textContent = "Enviando...";
+
+      var datos = {
+        nombre: form.nombre.value,
+        correo: form.correo.value,
+        telefono: form.telefono.value,
+        comentarios: form.comentarios.value
+      };
+
+      fetch(SUPABASE_URL + "/rest/v1/reservaciones", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "apikey": SUPABASE_KEY,
+          "Authorization": "Bearer " + SUPABASE_KEY,
+          "Prefer": "return=minimal"
+        },
+        body: JSON.stringify(datos)
+      })
+      .then(function (r) {
+        if (!r.ok) { throw new Error("Error " + r.status); }
+        mensaje.style.color = "green";
+        mensaje.textContent = "¡Gracias! Recibimos tu mensaje y te contactaremos pronto.";
+        form.reset();
+      })
+      .catch(function () {
+        mensaje.style.color = "crimson";
+        mensaje.textContent = "No se pudo enviar. Intenta de nuevo o llámanos al 828 173 99 55.";
+      })
+      .finally(function () { btn.disabled = false; });
+    });
+  </script>
+</body>
+</html>
